@@ -24,7 +24,7 @@ body {
 }
 
 body .content-wrapper {
-  height: 100%;
+  height: 518px;
   padding: 20px 30px;
   border-radius: 20px;
   background-color: white;
@@ -32,6 +32,7 @@ body .content-wrapper {
   background-position: -30% 0;
   background-size: contain;
   background-image: url(images/bg-pattern-desktop.svg);
+  box-shadow: -1px 19px 19px 1px rgba(21, 20, 32, 0.19);
 }
 
 body .content-wrapper .row {
@@ -66,10 +67,8 @@ body .content-wrapper .row .image-wrapper .woman {
 
 body .content-wrapper .row .faq-wrapper {
   padding: 0 50px 0 0;
-}
-
-body .content-wrapper .row .faq-wrapper details {
-  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body .content-wrapper .row .faq-wrapper hr {
@@ -81,17 +80,23 @@ body .content-wrapper .row .faq-wrapper h1 {
   color: #1d1e35;
 }
 
+body .content-wrapper .row .faq-wrapper .faq {
+  border-bottom: 1px solid #e7e7e9;
+}
+
 body .content-wrapper .row .faq-wrapper .faq .question {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  align-items: center;
   color: #4a4b5e;
   padding: 10px 0;
 }
 
 body .content-wrapper .row .faq-wrapper .faq .question:focus, body .content-wrapper .row .faq-wrapper .faq .question:hover {
   cursor: pointer;
+  color: #f47c57;
+}
+
+body .content-wrapper .row .faq-wrapper .faq .question img {
+  float: right;
 }
 
 body .content-wrapper .row .faq-wrapper .faq .answer {

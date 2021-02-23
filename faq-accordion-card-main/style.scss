@@ -42,7 +42,7 @@ body{
     background: linear-gradient( $violet, $soft-blue);
     /*card component styling*/
     .content-wrapper{
-        height: 100%;
+        height: 518px;
         padding: 20px 30px;
         border-radius: 20px;
         background-color: white;
@@ -50,6 +50,7 @@ body{
         background-position: -30% 0;
         background-size: contain;
         background-image: url(images/bg-pattern-desktop.svg);
+        box-shadow: -1px 19px 19px 1px rgba(21, 20, 32, 0.19);
         .row{
             padding: 50px 0;
             /*image wrapper styling*/
@@ -77,9 +78,8 @@ body{
             /*FAQ wrapper styling*/
             .faq-wrapper{
                 padding: 0 50px 0 0;
-                details{
-                    margin: 20px 0;
-                }
+                display: flex;
+                flex-direction: column;
                 hr{
                     background: $light-grayish-blue;
                 }
@@ -88,17 +88,19 @@ body{
                     color: $desaturated-blue;
                 }
                 .faq{
+                    border-bottom: 1px solid $light-grayish-blue;
                     .question{
-                        display: flex;
-                        justify-content: space-between;
                         width: 100%;
-                        align-items: center;
                         color: $very-dark-grayish-blue;
                         padding: 10px 0;
                         
 
                         &:focus, &:hover{
                             cursor: pointer;
+                            color: $soft-red;
+                        }
+                        img{
+                            float: right;
                         }
                         
                         
