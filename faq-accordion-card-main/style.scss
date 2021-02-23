@@ -30,7 +30,6 @@ $bold: 700;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
 }
 body{
     font-size: $size;
@@ -41,6 +40,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background: linear-gradient( $violet, $soft-blue);
+    /*card component styling*/
     .content-wrapper{
         height: 100%;
         padding: 20px 30px;
@@ -52,6 +52,7 @@ body{
         background-image: url(images/bg-pattern-desktop.svg);
         .row{
             padding: 50px 0;
+            /*image wrapper styling*/
             .image-wrapper{
                 display: flex;
                 align-items: center;
@@ -73,6 +74,7 @@ body{
                     z-index: 1;
                 }
             }
+            /*FAQ wrapper styling*/
             .faq-wrapper{
                 padding: 0 50px 0 0;
                 details{
@@ -112,8 +114,7 @@ body{
         }
 
     }
-
-
+    /*Footer section wrapper*/
     .attribution { 
         font-size: 13px; 
         text-align: center; 
@@ -128,6 +129,7 @@ body{
         }
     }
 }
+/*Reponsiveness*/
 @media screen and (max-width: 767px){
     body{
         .content-wrapper{
@@ -170,10 +172,6 @@ body{
         .content-wrapper{
             height: 80% !important;
             width: 90%;
-        }
-
-        .attribution {  
-            bottom: -46% !important;
         }
     }
 }

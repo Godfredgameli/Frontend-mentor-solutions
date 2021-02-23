@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 body {
@@ -20,6 +19,8 @@ body {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(#af67e9, #6565e7);
+  /*card component styling*/
+  /*Footer section wrapper*/
 }
 
 body .content-wrapper {
@@ -35,6 +36,8 @@ body .content-wrapper {
 
 body .content-wrapper .row {
   padding: 50px 0;
+  /*image wrapper styling*/
+  /*FAQ wrapper styling*/
 }
 
 body .content-wrapper .row .image-wrapper {
@@ -110,6 +113,7 @@ body .attribution a {
   color: #0ed428;
 }
 
+/*Reponsiveness*/
 @media screen and (max-width: 767px) {
   body .content-wrapper {
     height: 80% !important;
@@ -149,9 +153,6 @@ body .attribution a {
   body .content-wrapper {
     height: 80% !important;
     width: 90%;
-  }
-  body .attribution {
-    bottom: -46% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
