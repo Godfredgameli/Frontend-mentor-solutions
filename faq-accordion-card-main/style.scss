@@ -30,7 +30,7 @@ $bold: 700;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    outline: 1px solid red;
 }
 body{
     font-size: $size;
@@ -39,20 +39,19 @@ body{
     display: flex;
     align-items: center;
     width: 100%;
-    min-height: 97vh;
+    min-height: 100vh;
     background: linear-gradient( $violet, $soft-blue);
-
     .content-wrapper{
         height: 100%;
         padding: 20px 30px;
         border-radius: 20px;
         background-color: white;
-        background-image: url(images/bg-pattern-desktop.svg);
-        background-position: left left;
         background-repeat: no-repeat;
+        background-position: -30% 0;
         background-size: contain;
+        background-image: url(images/bg-pattern-desktop.svg);
         .row{
-            padding: 100px 0;
+            padding: 50px 0;
             .image-wrapper{
                 display: flex;
                 align-items: center;
@@ -63,17 +62,19 @@ body{
                     height: auto;
                 }
                 .box{
-                    margin-left: -50%;
+                    margin-left: -110%;
                     margin-bottom: -20%;
+                    position: relative;
                     z-index: 2;
                 }
                 .woman{
-                    margin-left: -30%;
+                    margin-left: -50%;
+                    position: absolute;
                     z-index: 1;
                 }
             }
             .faq-wrapper{
-                padding: 30px 50px 50px 0;
+                padding: 0 50px 0 0;
                 details{
                     margin: 20px 0;
                 }
@@ -88,8 +89,11 @@ body{
                     .question{
                         display: flex;
                         justify-content: space-between;
+                        width: 100%;
                         align-items: center;
                         color: $very-dark-grayish-blue;
+                        padding: 10px 0;
+                        
 
                         &:focus, &:hover{
                             cursor: pointer;
@@ -111,14 +115,65 @@ body{
 
 
     .attribution { 
-        font-size: 14px; 
+        font-size: 13px; 
         text-align: center; 
         position: absolute;
         bottom: 0;
         width: 100%;
+        background-color: #333;
+        color: white;
     
         a { 
-            color: red; 
+            color: rgb(14, 212, 40); 
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    body{
+        .content-wrapper{
+            height: 80% !important;
+            background-image: url(images/bg-pattern-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: 50%;
+            .row{
+                height: 100% !important;
+                padding: 0;
+                .image-wrapper{
+                    height: 20% !important;
+                    .woman{
+                        width: 50%;
+                        margin-left: 0;
+                        margin-top: -15%;
+                    }
+                    .box{
+                        width: 25% !important;
+                        margin-left: -35%;
+                        margin-top: -25%;
+                    }
+                    
+                }
+                .faq-wrapper{
+                    margin-top: 20%;
+                    height: 60% !important;
+                    padding: 0;
+                    h1{
+                        text-align: center;
+                    }
+                }
+            }
+        }       
+    }
+}
+@media screen and (max-width: 580px){
+    body{
+        .content-wrapper{
+            height: 80% !important;
+            width: 90%;
+        }
+
+        .attribution {  
+            bottom: -46% !important;
         }
     }
 }
